@@ -35,6 +35,8 @@ export default class Profile extends React.Component {
           <TextInput placeholder="E-mail" style={styles.input}/>
 
           <TextInput placeholder="Senha" style={styles.input}/>
+
+          <TextInput placeholder="Confirmar senha" style={styles.input}/>
           
           <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
               <Text style={styles.textbutton}>CADASTRAR</Text>
