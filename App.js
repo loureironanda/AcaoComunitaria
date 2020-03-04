@@ -15,21 +15,25 @@ import { Ionicons } from '@expo/vector-icons';
 
 const DrawerNavigation = createDrawerNavigator(
   {
-    Home: Home,
-    About: About,
-    Projects: Projects,
-    Calendar: Calendar,
-    Gallery: Gallery, 
-    Login: Login,
-    Cadastro: Cadastro,
-    Contact: Contact
+    "Home": { screen: Home},
+    "About": { screen: About},
+    "Projects": { screen: Projects},
+    "Calendar": { screen: Calendar},
+    "Gallery": { screen: Gallery}, 
+    "Login": { screen: Login}, 
+    "Cadastro": { screen: Cadastro},
+    "Contact": { screen: Contact}
+    
   },
+
   {
-    initialRouteName: "Home",
+    initialRouteName: "Login",
+    headerMode: "none",
     drawerBackgroundColor: "#0d62ad",
     contentOptions: {
       activeTintColor: "white"
     },
+    
     contentComponent: DrawerMenu
   }
 );
@@ -38,6 +42,7 @@ const Router = createAppContainer(
   createSwitchNavigator({
     // This is where your Auth screens would be handled.
     DrawerNavigation
+    
   })
 );
 
@@ -55,6 +60,7 @@ export default class App extends Component {
 
   render() {
     return <Router />;
+
   }
 }
 
