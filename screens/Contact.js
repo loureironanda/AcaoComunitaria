@@ -28,7 +28,9 @@ export default class Contact extends Component {
 
             <Text>A Ação Comunitária fica na galeria LaSalle e funciona das 9h ás 21h.</Text>
       
-           <Text style={{marginBottom: 20}}>Deseja falar conosco e tirar dúvidas? Mande uma mensagem!</Text>
+           <Text>Deseja falar conosco e tirar dúvidas? Mande uma mensagem!</Text>
+
+          {/* INFORMAÇÕES CONTATO */ }
 
            <Card style={styles.cards}>
               <Text style={styles.titleCard}>TELEFONE</Text>
@@ -46,6 +48,8 @@ export default class Contact extends Component {
            </Card>
 
            <Text style={styles.sociais}>Nos siga nas redes sociais:</Text>
+
+            {/* REDES SOCIAIS */ }
 
            <Card style={styles.cardsocial}>
             <CardItem button onPress={ ()=>{ Linking.openURL('https://www.instagram.com/acao.comunitariarj/')}}>
@@ -90,10 +94,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
-    marginTop: Constants.statusBarHeight
+    marginTop: Constants.statusBarHeight    
   },
   scrollView: {
-    marginHorizontal: 20,
+    marginHorizontal: 20
   },
 
   cardsocial: {
@@ -133,7 +137,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#0d62ad",
     borderRadius: 6,
     paddingBottom: 15,
-    marginBottom: 40
+    marginBottom: 20
   },
 
   input: {

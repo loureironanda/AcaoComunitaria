@@ -25,8 +25,9 @@ export default class Profile extends React.Component {
         </Header>
         <Content>
         <View style={styles.container}>
+
         <Image style={styles.logo}
-            source={require('./images/logo.jpg')}  
+            source={require('./img/logo.jpg')}  
             style={{marginTop: 70,width: 305, height: 160}} 
           />
 
