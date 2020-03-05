@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Header, Title, Button, Left, Right, Body, Content } from 'native-base';
 import { StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
+import { Card, CardTitle, CardContent, CardButton, CardImage } from 'react-native-cards';
 
 
 export default class Projects extends Component {

@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import { Container, Header, Title, Button, Left, Right, Body } from 'native-base';
+import { Container, Header, Title, Button, Left, Right, Body, Content } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet } from "react-native";
-
+import { StyleSheet, View, FlatList, SafeAreaView, Text } from "react-native";
 export default class Gallery extends Component {
-  
+  state = {
+    data: [
+      { id: "00", name: "Relâmpago McQueen" },
+      { id: "01", name: "Agente Tom Mate" },
+      { id: "02", name: "Doc Hudson" },
+      { id: "03", name: "Cruz Ramirez" }
+    ]
+  };
   render() {
     return (
       <Container>
@@ -19,6 +25,24 @@ export default class Gallery extends Component {
           </Body>
           <Right />
         </Header>
+        <Content>
+          <View style={styles.container}>
+          <SafeAreaView>
+            <FlatList
+              data={this.state.data}
+              keyExtractor={item => item.id}
+              numColumns={2} 
+              renderItem={({ item }) => {
+                return (
+                  <View style={styles.item}>
+                    <Text style={styles.text}>{item.name}</Text>
+                  </View>
+                );
+              }}
+            />
+          </SafeAreaView>
+          </View>
+        </Content>
       </Container>
     );
   }
@@ -26,7 +50,26 @@ export default class Gallery extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#0d62ad"
+    backgroundColor: "#0d62ad",
+    marginBottom: 20
+  },
+
+  item: {
+    alignItems: "center",
+    backgroundColor: "#dcda48",
+    flexGrow: 1,
+    flexBasis: 0,
+    margin: 4,
+    padding: 20
+  },
+
+  text: {
+    color: "#333333"
+  },
+
+  container: {
+    paddingLeft: 15,
+    paddingRight: 15
   }
 
 });
