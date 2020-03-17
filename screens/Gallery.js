@@ -50,8 +50,7 @@ export default class Gallery extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#0d62ad",
-    marginBottom: 20
+    backgroundColor: "#0d62ad"
   },
 
   item: {
@@ -69,7 +68,8 @@ const styles = StyleSheet.create({
 
   container: {
     paddingLeft: 15,
-    paddingRight: 15
+    paddingRight: 15,
+    marginTop: 20
   }
 
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { Container, Header, Title, Left, Right, Body, Content, Button } from 'native-base';
+import { Container, Header, Title, Right, Body, Content } from 'native-base';
 
 export default class Profile extends React.Component {
   
@@ -13,11 +12,6 @@ export default class Profile extends React.Component {
       return(
         <Container>
         <Header style={styles.header}>
-          <Left>
-            <Button style={styles.header} onPress={() => this.props.navigation.openDrawer()} title="">
-              <Ionicons name="md-menu" size={32} color="white"/>
-            </Button>
-          </Left>
           <Body>
             <Title> Cadastro</Title>
           </Body>
@@ -94,7 +88,8 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    backgroundColor: "#0d62ad"
+    backgroundColor: "#0d62ad",
+    paddingLeft: 30
   }
 
 });

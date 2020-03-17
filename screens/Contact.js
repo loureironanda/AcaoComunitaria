@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Container, Header, Title, Button, Left, Right, Body, Content, 
 Card, CardItem, Text, Icon} from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
-import { SafeAreaView, ScrollView, StyleSheet, Linking, TextInput, TouchableOpacity} from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, Linking} from "react-native";
 import Constants from 'expo-constants';
-import Textarea from 'react-native-textarea';
 
 export default class Contact extends Component {
   

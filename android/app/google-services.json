@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "352452689640",
+    "firebase_url": "https://acao-comunitaria-48a1b.firebaseio.com",
+    "project_id": "acao-comunitaria-48a1b",
+    "storage_bucket": "acao-comunitaria-48a1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352452689640:android:6da4b4a59be5996a9e535d",
+        "android_client_info": {
+          "package_name": "com.mycompany.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352452689640-hpbb97tkhb9c2lh3nq50u4a02r5g1um2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADuuwW-Lh6bZ0Ly3zhh7aOxsHxYYyGLlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352452689640-hpbb97tkhb9c2lh3nq50u4a02r5g1um2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
