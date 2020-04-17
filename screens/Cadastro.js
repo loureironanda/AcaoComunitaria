@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
-import { Container, Header, Title, Right, Body, Content } from 'native-base';
+import { Container, Content } from 'native-base';
 
 export default class Profile extends React.Component {
   
@@ -10,36 +10,31 @@ export default class Profile extends React.Component {
   
   render(){
       return(
-        <Container>
-        <Header style={styles.header}>
-          <Body>
-            <Title> Cadastro</Title>
-          </Body>
-          <Right />
-        </Header>
+      <Container>
         <Content>
-        <View style={styles.container}>
+          <View style={styles.container}>
+          <Image style={styles.logo}
+              source={require('./img/logo.jpg')}  
+              style={{marginTop: 70,width: 305, height: 160}} 
+            />
 
-        <Image style={styles.logo}
-            source={require('./img/logo.jpg')}  
-            style={{marginTop: 70,width: 305, height: 160}} 
-          />
+          <TextInput placeholder="Nome" style={styles.input}/>
 
-        <TextInput placeholder="Nome" style={styles.input}/>
+            <TextInput placeholder="E-mail" style={styles.input}/>
 
-          <TextInput placeholder="E-mail" style={styles.input}/>
+            <TextInput placeholder="Senha" style={styles.input}/>
+            
+            <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
+                <Text style={styles.textbutton}>CADASTRAR</Text>
+            </TouchableOpacity>
 
-          <TextInput placeholder="Senha" style={styles.input}/>
+            <TouchableOpacity style={styles.buttonlogin} onPress={() => this.props.navigation.navigate('Login')}>
+              <Text style={styles.textologin}>Já possui uma conta? <Text style={styles.login}>Login</Text> </Text>
+             
+              </TouchableOpacity>
 
-          <TextInput placeholder="Confirmar senha" style={styles.input}/>
-          
-          <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
-              <Text style={styles.textbutton}>CADASTRAR</Text>
-          </TouchableOpacity>
-         
-      </View>
-
-      </Content>
+          </View>
+        </Content>
       </Container>
       )
   }
@@ -51,11 +46,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: "45%",
+    padding: 30
   },
 
   input: {
-    height: 40,
-    width: "85%",
+    height: 50,
+    width: "100%",
     textAlign: "left",
     borderColor: 'grey',
     borderWidth: 1,
@@ -66,7 +63,7 @@ const styles = StyleSheet.create({
 
   buttoninput: {
     marginTop: 10,
-    width: "85%",
+    width: "100%",
     backgroundColor: '#0D62AD',
     padding: 15,
   }, 
@@ -87,9 +84,15 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
 
-  header: {
-    backgroundColor: "#0d62ad",
-    paddingLeft: 30
-  }
+    
+  login: {
+    color: "#fcbe41"
+},
+
+textologin: {
+  textAlign: "center",
+  fontWeight: 'bold',
+  marginTop: 30
+},
 
 });

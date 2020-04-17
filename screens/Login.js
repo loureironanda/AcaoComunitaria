@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
-import { Container, Header, Title, Right, Body, Content } from 'native-base';
+import { Container, Content } from 'native-base';
 
 export default class Profile extends React.Component {
   
@@ -11,37 +11,30 @@ export default class Profile extends React.Component {
   render(){
       return(
 
-        <Container>
-        <Header style={styles.header}>
-          <Body>
-              <Title> Entrar</Title>
-          </Body>
-          <Right />
-        </Header>
+      <Container >
         <Content>
-        
-        <View style={styles.container}>
-          
-        <Image style={styles.logo}
-            source={require('./img/logo.jpg')}  
-            style={{marginTop: 100, width: 305, height: 160}} 
-          />
+          <View style={styles.container}>
 
-          <TextInput placeholder="E-mail" style={styles.input}/>
+          <Image style={styles.logo}
+              source={require('./img/logo.jpg')}  
+              style={{marginTop: 100, width: 305, height: 160}} 
+            />
 
-          <TextInput placeholder="Senha" style={styles.input}/>
-          
-          <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
+            <TextInput placeholder="E-mail" style={styles.input}/>
 
-              <Text style={styles.textbutton}>ENTRAR</Text>
+            <TextInput placeholder="Senha" style={styles.input}/>
+            
+            <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
 
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.buttoncadastro} onPress={() => this.props.navigation.navigate('Cadastro')}>
-            <Text style={styles.textocadatro}>Me cadastrar</Text>
+                <Text style={styles.textbutton}>ENTRAR </Text>
+
             </TouchableOpacity>
-      </View>
-
-      </Content>
+            <TouchableOpacity style={styles.buttoncadastro} onPress={() => this.props.navigation.navigate('Cadastro')}>
+              <Text style={styles.textocadastro}>Não possui conta? <Text style={styles.cadastrar}>Cadastre-se</Text> </Text>
+             
+              </TouchableOpacity>
+         </View>
+        </Content>
       </Container>
       )
   }
@@ -53,12 +46,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: "35%",
+    padding: 30
   },
 
   input: {
-    height: 40,
-    width: "85%",
+    height: 50,
+    width: "100%",
     textAlign: "left",
     borderColor: 'grey',
     borderWidth: 1,
@@ -69,31 +64,29 @@ const styles = StyleSheet.create({
 
   buttoninput: {
     marginTop: 10,
-    width: "85%",
+    width: "100%",
     backgroundColor: '#0D62AD',
     padding: 15
   }, 
 
   textbutton: {
     color: '#fff',
-    textAlign: "center",
+    textAlign: "center"
   },
 
   logo: {
-    marginBottom: 20
+    marginBottom: 20,
   },
 
-  textocadatro: {
+  textocadastro: {
     textAlign: "center",
-    borderBottomColor: '#0000FF',
-    borderBottomWidth: 1,
-    marginTop: 10,
-    color: '#0000FF'
+    fontWeight: 'bold',
+    marginTop: 30
   },
-
-  header: {
-    backgroundColor: "#0d62ad",
-    paddingLeft: 30
+  
+  cadastrar: {
+      color: "#fcbe41"
   }
 
 });
+

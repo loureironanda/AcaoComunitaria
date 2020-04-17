@@ -1,9 +1,9 @@
 {
   "packagerPort": 19001,
-  "packagerPid": 2976,
+  "packagerPid": 5260,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://gu-zbt.loureironanda.acaocomunitaria.exp.direct",
-  "packagerNgrokUrl": "https://packager.gu-zbt.loureironanda.acaocomunitaria.exp.direct",
-  "ngrokPid": 5976
+  "expoServerNgrokUrl": "https://h9-bd4.loureironanda.acaocomunitaria.exp.direct",
+  "packagerNgrokUrl": "https://packager.h9-bd4.loureironanda.acaocomunitaria.exp.direct",
+  "ngrokPid": 6128
 }

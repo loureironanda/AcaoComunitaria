@@ -1,40 +1,50 @@
 {
   "project_info": {
-    "project_number": "352452689640",
-    "firebase_url": "https://acao-comunitaria-48a1b.firebaseio.com",
-    "project_id": "acao-comunitaria-48a1b",
-    "storage_bucket": "acao-comunitaria-48a1b.appspot.com"
+    "project_id": "exponent-5dd6d",
+    "project_number": "367315174693",
+    "name": "Expo Client"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:352452689640:android:6da4b4a59be5996a9e535d",
+        "mobilesdk_app_id": "1:367315174693:android:f968efbb41d1fa7a",
+        "client_id": "android:host.exp.exponent",
+        "client_type": 1,
         "android_client_info": {
-          "package_name": "com.mycompany.myapp"
+          "package_name": "com.mycompany.myapp",
+          "certificate_hash": ""
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "352452689640-hpbb97tkhb9c2lh3nq50u4a02r5g1um2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyADuuwW-Lh6bZ0Ly3zhh7aOxsHxYYyGLlA"
+          "current_key": ""
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-76673608-1"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "352452689640-hpbb97tkhb9c2lh3nq50u4a02r5g1um2.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
         }
       }
     }
   ],
-  "configuration_version": "1"
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
 }
