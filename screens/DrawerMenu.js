@@ -8,11 +8,12 @@ const menuData = [
   { icon: "calendar", name: "Calendário", screenName: "Calendar", key: 3 },
   { icon: "tasks", name: "Projetos", screenName: "Projects", key: 4 },
   { icon: "image", name: "Galeria", screenName: "Gallery", key: 5 },
+  { icon: "heart", name: "Ser voluntário", screenName: "Volunteer", key: 6 },
   {
     icon: "phone",
     name: "Contato",
     screenName: "Contact",
-    key: 6
+    key: 7
   }
 ];
 

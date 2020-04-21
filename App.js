@@ -7,25 +7,13 @@ import Gallery from "./screens/Gallery";
 import Login from "./screens/Login";
 import Cadastro from "./screens/Cadastro";
 import Contact from "./screens/Contact";
+import Volunteer from "./screens/Volunteer";
 import DrawerMenu from "./screens/DrawerMenu";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
-/*import firebase from 'react-native-firebase';
 
-var firebaseConfig = {
-  apiKey: "AIzaSyA9Ccs72HGaQycMj8oX09GHFJA41tvmVDQ",
-  authDomain: "acaocomunitaria-adcaa.firebaseapp.com",
-  databaseURL: "https://acaocomunitaria-adcaa.firebaseio.com",
-  projectId: "acaocomunitaria-adcaa",
-  storageBucket: "acaocomunitaria-adcaa.appspot.com",
-  messagingSenderId: "172785544571",
-  appId: "1:172785544571:web:ed2ca5027b34aef42d61de"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-*/
 const DrawerNavigation = createDrawerNavigator(
   {
     "Home": { screen: Home},
@@ -35,8 +23,8 @@ const DrawerNavigation = createDrawerNavigator(
     "Gallery": { screen: Gallery}, 
     "Login": { screen: Login}, 
     "Cadastro": { screen: Cadastro},
+    "Volunteer": { screen: Volunteer},
     "Contact": { screen: Contact}
-    
   },
 
   {

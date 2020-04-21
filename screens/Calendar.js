@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Header, Title, Button, Left, Right, Body } from 'native-base';
+import { Container, Header, Title, Button, Left, Right, Body, Content, Text} from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet } from "react-native";
-
+import { StyleSheet, SafeAreaView, ScrollView, Picker } from "react-native";
 export default class Calendar2 extends Component {
-  
+  state = {user: ''}
+   updateUser = (user) => {
+      this.setState({ user: user })
+   }
   render() {
     return (
       <Container>
@@ -19,6 +21,21 @@ export default class Calendar2 extends Component {
           </Body>
           <Right />
         </Header>
+
+        <Content>
+          <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.scrollView}>
+              <Picker selectedValue = {this.state.user} onValueChange = {this.updateUser}>
+               <Picker.Item label = "Março, 2019" value = "teste" />
+               <Picker.Item label = "Abril, 2019" value = "teste" />
+               <Picker.Item label = "Maio, 2019" value = "teste" />
+               <Picker.Item label = "Junho, 2019" value = "teste" />
+            </Picker>
+            <Text style = {styles.text}>{this.state.user}</Text>
+            </ScrollView>
+          </SafeAreaView>
+          
+        </Content>
       </Container>
     );
   }
@@ -27,7 +44,10 @@ export default class Calendar2 extends Component {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: "#0d62ad"
-  }
+  },
 
+  container: {
+    padding: 30
+  }
 });
 
