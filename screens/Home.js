@@ -21,9 +21,7 @@ export default class Home extends Component {
           <Right />
         </Header>
         <Content>
-        <Text style={{ fontSize: 16 }}>This is the Home screen</Text>
-        <Text style={{ fontSize: 17 }}>This is the Home screen!!</Text>
-          
+            <Text>tste</Text>
         </Content>
       </Container>
       
