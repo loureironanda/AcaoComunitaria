@@ -1,9 +1,10 @@
 {
   "packagerPort": 19001,
-  "packagerPid": 2812,
+  "packagerPid": 6748,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "expoServerNgrokUrl": "https://si-td2.loureironanda.acaocomunitaria.exp.direct",
   "packagerNgrokUrl": "https://packager.si-td2.loureironanda.acaocomunitaria.exp.direct",
-  "ngrokPid": 6868
+  "ngrokPid": 6300,
+  "webpackServerPort": null
 }

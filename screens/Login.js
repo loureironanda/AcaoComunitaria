@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: "100%",
     textAlign: "left",
-    borderColor: 'grey',
     borderWidth: 1,
     marginTop: 10,
     padding: 10,
