@@ -58,14 +58,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 10,
     padding: 10,
-    borderColor: "#c7c7c7"
+    borderColor: "#c7c7c7",
+    borderRadius: 30
   },
 
   buttoninput: {
     marginTop: 10,
     width: "100%",
     backgroundColor: '#0D62AD',
-    padding: 15
+    padding: 15,
+    borderRadius: 30
   }, 
 
   textbutton: {

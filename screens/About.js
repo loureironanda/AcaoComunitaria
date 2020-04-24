@@ -26,7 +26,6 @@ export default class About extends Component {
             <ScrollView style={styles.scrollView}>
 
               <Text style={styles.textoabout}>
-                
                   A Ação Comunitária tem como missão fortalecer a identidade e o 
                   carisma lassalistas, para que em tudo estejam presentes os princípios de 
                   FÉ, FRATERNIDADE E SERVIÇO:
@@ -75,37 +74,70 @@ const styles = StyleSheet.create({
   },
   cards: {
     marginTop: 30,
-    backgroundColor: "#fcbe41",
-    borderRadius: 6,
-    paddingBottom: 15
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "#fcbe41",
+    borderRadius: 5,
+    height: 140,
+    padding: 30,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
   },
 
   cards2: {
-    backgroundColor: "#ed3238",
-    borderRadius: 6,
-    paddingBottom: 15
+    marginTop: 20,
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "#ed3238",
+    borderRadius: 5,
+    height: 160,
+    padding: 30,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
   },
 
   cards3: {
-    backgroundColor: "#0d62ad",
-    borderRadius: 6,
-    paddingBottom: 15,
-    marginBottom: 40
+    marginTop: 20,
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "#0d62ad",
+    borderRadius: 5,
+    height: 160,
+    padding: 30,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
   },
 
   titleCard: {
-    color: "white",
-    fontSize: 21,
-    paddingLeft: 20,
-    paddingTop: 20,
-    paddingBottom: 10
+    color: "black",
+    fontSize: 17,
+    marginBottom: 10,
+    fontWeight: "bold"
   },
 
   textCard: {
-    color: "white",
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
+    color: "black"
   },
 
   header: {

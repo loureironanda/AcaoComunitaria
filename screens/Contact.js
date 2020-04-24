@@ -104,39 +104,78 @@ const styles = StyleSheet.create({
   },
   cards: {
     marginTop: 30,
-    backgroundColor: "#fcbe41",
-    borderRadius: 6,
-    paddingBottom: 15
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "red",
+    borderRadius: 5,
+    height: 110,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
   },
+
+  cards2: {
+    marginTop: 20,
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "#ed3238",
+    borderRadius: 5,
+    height: 110,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
+  },
+
+  cards3: {
+    marginTop: 20,
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "#0d62ad",
+    borderRadius: 5,
+    height: 130,
+    marginBottom: 20,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
+  },
+
   titleCard: {
-    color: "white",
+    color: "black",
     fontSize: 21,
     paddingLeft: 20,
     paddingTop: 20,
     paddingBottom: 10
   },
 
-  sociais: {
-    fontSize: 22,
-    marginBottom: 30
-  },
-
   textCard: {
-    color: "white",
+    color: "black",
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
   },
-  cards2: {
-    backgroundColor: "#ed3238",
-    borderRadius: 6,
-    paddingBottom: 15
-  },
-  cards3: {
-    backgroundColor: "#0d62ad",
-    borderRadius: 6,
-    paddingBottom: 15,
-    marginBottom: 20
+
+  sociais: {
+    fontSize: 17,
+    marginBottom: 20,
+    marginTop: 20
   },
 
   input: {

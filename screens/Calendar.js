@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   },
 
   textCard: {
-    color: "white",
+    color: "black",
     paddingLeft: 15,
     paddingRight: 15,
     fontSize: 17,
@@ -195,13 +195,24 @@ const styles = StyleSheet.create({
   },
 
   cards: {
-    marginTop: 10,
-    backgroundColor: "#fcbe41",
-    borderRadius: 6,
-    minHeight: 90,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor:'white',
+    borderLeftWidth: 10,
+    borderLeftColor: "#fcbe41",
+    borderRadius: 5,
+    height: 100,
+    padding: 30,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
+    borderBottomColor: "#ddd",
+    shadowColor: '#000',
+    shadowOffset: { width: 10, height: 5 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    elevation: 5
   },
 
   picker: {

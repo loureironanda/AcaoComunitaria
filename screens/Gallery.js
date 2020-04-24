@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Title, Button, Left, Right, Body, Content } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet, View, FlatList, SafeAreaView, Text } from "react-native";
+import { StyleSheet, View, FlatList, SafeAreaView, Text, ScrollView } from "react-native";
 export default class Gallery extends Component {
   state = {
     data: [
@@ -28,6 +28,7 @@ export default class Gallery extends Component {
         <Content>
           <View style={styles.container}>
           <SafeAreaView>
+            <ScrollView style={styles.scrollView}>
             <FlatList
               data={this.state.data}
               keyExtractor={item => item.id}
@@ -40,6 +41,7 @@ export default class Gallery extends Component {
                 );
               }}
             />
+            </ScrollView>
           </SafeAreaView>
           </View>
         </Content>
