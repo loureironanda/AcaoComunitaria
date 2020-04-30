@@ -25,8 +25,8 @@ export default class Projects extends Component {
         <View style={styles.container}>
         
           {/* PROJETO DESABROCHAR */ }
-
-          <Card>
+    
+          <Card style={styles.cards}>
             <CardImage source={require('./img/desabrochar.jpg')} />
             
             <CardTitle title="Desabrochar"/>
@@ -104,8 +104,6 @@ export default class Projects extends Component {
             <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
           </Card>
 
-
-
         </View>
       </Content>
     </Container>
@@ -128,16 +126,19 @@ const styles = StyleSheet.create({
   },
 
   btnProjeto: {
-    backgroundColor: "#FEB557",
+    backgroundColor: "#0d62ad",
     paddingTop: 20,
     paddingBottom: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 140,
+    paddingRight: 140,
     marginLeft: 15,
-    marginBottom: 40
+    marginBottom: 40,
+    borderRadius: 20
   },
   
   cards: {
-    marginTop: 20
+    marginTop: 20,
+    borderBottomWidth: 6,
+    borderBottomColor: "#fcbe41"
   }
 });

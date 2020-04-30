@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Container, Header, Title, Button, Left, Right, Body, Content, 
-Card, CardItem, Text, Icon} from 'native-base';
+import { Container, Header, Title, Left, Right, Body, Content, Button, Text, CardItem, Icon } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
-import { SafeAreaView, ScrollView, StyleSheet, Linking} from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet} from "react-native";
 import Constants from 'expo-constants';
+import { Card } from 'react-native-cards';
 
-export default class Contact extends Component {
-  
+export default class Contato extends Component {
+
   render() {
     return (
       <Container>
         <Header style={styles.header}>
           <Left>
-            <Button style={styles.header} onPress={() => this.props.navigation.openDrawer()} title="Toggle Drawer">
+            <Button style={styles.header} onPress={() => this.props.navigation.openDrawer()} title="">
               <Ionicons name="md-menu" size={32} color="white"/>
             </Button>
           </Left>
@@ -25,30 +25,25 @@ export default class Contact extends Component {
           <SafeAreaView style={styles.container}>
             <ScrollView style={styles.scrollView}>
 
-            <Text>A Ação Comunitária fica na galeria LaSalle e funciona das 9h ás 21h.</Text>
-      
-           <Text>Deseja falar conosco e tirar dúvidas? Mande uma mensagem!</Text>
+            <Text style={styles.textoInicio}>A Ação Comunitária fica na galeria LaSalle e funciona das 9h ás 21h.</Text>
+  
+                <Card style={styles.cards}>
+                  <Text style={styles.titleCard}>TELEFONE</Text>
+                  <Text style={styles.textCard}>(21) 2199-6600 (RAMAL 6711)</Text>
+                </Card>
 
-          {/* INFORMAÇÕES CONTATO */ }
+                <Card style={styles.cards2}>
+                  <Text style={styles.titleCard}>E-MAIL</Text>
+                  <Text style={styles.textCard}>nac.uni@unilasalle.org </Text>
+                </Card>
 
-           <Card style={styles.cards}>
-              <Text style={styles.titleCard}>TELEFONE</Text>
-                <Text style={styles.textCard}>(21) 2199-6600 (RAMAL 6711)</Text>
-           </Card>
+                <Card style={styles.cards3}>
+                  <Text style={styles.titleCard}>ENDEREÇO</Text>
+                  <Text style={styles.textCard}>Rua Gastão Gonçalves, 79, Santa Rosa - Niterói RJ, 24240-030</Text>
+                </Card>
 
-           <Card style={styles.cards2}>
-              <Text style={styles.titleCard}>E-MAIL</Text>
-                <Text style={styles.textCard}>nac.uni@unilasalle.org</Text>
-           </Card>
+                <Text style={styles.sociais}>Nos siga nas redes sociais:</Text>
 
-           <Card style={styles.cards3}>
-              <Text style={styles.titleCard}>ENDEREÇO</Text>
-                <Text style={styles.textCard}>Rua Gastão Gonçalves, 79, Santa Rosa - Niterói RJ, 24240-030</Text>
-           </Card>
-
-           <Text style={styles.sociais}>Nos siga nas redes sociais:</Text>
-
-            {/* REDES SOCIAIS */ }
 
            <Card style={styles.cardsocial}>
             <CardItem button onPress={ ()=>{ Linking.openURL('https://www.instagram.com/acao.comunitariarj/')}}>
@@ -78,37 +73,36 @@ export default class Contact extends Component {
           
         </Content>
       </Container>
+      
     );
   }
 }
 
-
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: "#0d62ad"
-  },
-  
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    flex: 1,
-    marginTop: Constants.statusBarHeight    
+    marginTop: Constants.statusBarHeight
   },
   scrollView: {
-    marginHorizontal: 20
+    marginHorizontal: 20,
   },
 
-  cardsocial: {
-    marginBottom: 40
+  textoabout: {
+    textAlign: "justify",
+    padding: 6,
+    fontSize: 15,
+    lineHeight: 23
   },
   cards: {
     marginTop: 30,
     backgroundColor:'white',
     borderLeftWidth: 10,
-    borderLeftColor: "red",
+    borderLeftColor: "#fcbe41",
     borderRadius: 5,
-    height: 110,
+    height: 130,
+    padding: 30,
     borderBottomWidth: 1,
     borderTopWidth: 1,
     borderTopColor: "#ddd",
@@ -126,7 +120,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 10,
     borderLeftColor: "#ed3238",
     borderRadius: 5,
-    height: 110,
+    height: 130,
+    padding: 30,
     borderBottomWidth: 1,
     borderTopWidth: 1,
     borderTopColor: "#ddd",
@@ -144,8 +139,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 10,
     borderLeftColor: "#0d62ad",
     borderRadius: 5,
-    height: 130,
-    marginBottom: 20,
+    height: 140,
+    padding: 30,
     borderBottomWidth: 1,
     borderTopWidth: 1,
     borderTopColor: "#ddd",
@@ -159,61 +154,35 @@ const styles = StyleSheet.create({
 
   titleCard: {
     color: "black",
-    fontSize: 21,
-    paddingLeft: 20,
-    paddingTop: 20,
-    paddingBottom: 10
+    fontSize: 17,
+    marginBottom: 10,
+    fontWeight: "bold"
   },
 
   textCard: {
-    color: "black",
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
+    color: "black"
+  },
+
+  header: {
+    backgroundColor: "#0d62ad"
   },
 
   sociais: {
     fontSize: 17,
     marginBottom: 20,
-    marginTop: 20
+    marginTop: 20,
+    marginLeft: 5
   },
 
-  input: {
-    height: 40,
-    textAlign: "left",
-    borderColor: 'grey',
-    borderWidth: 1,
-    marginTop: 10,
-    padding: 10,
-    borderColor: "#c7c7c7"
+  cardsocial: {
+    marginBottom: 40
   },
 
-  buttoninput: {
-    marginTop: 10,
-    backgroundColor: '#0D62AD',
-    padding: 15,
-    marginBottom: 30
-  }, 
-
-  textbutton: {
-    color: '#fff',
-    textAlign: "center",
+  textoInicio: {
+    marginLeft: 5
   }
 
 });
 
-/*
 
-<TextInput placeholder="Nome" style={styles.input}/>
 
-          <TextInput placeholder="E-mail" style={styles.input}/>
-
-          <Textarea marginTop={10} padding={10} maxLength={120} placeholder={'Mensagem'}  placeholderTextColor={'#c7c7c7'}
-    underlineColorAndroid={'transparent'} borderWidth={1} height={130} textAlignVertical={'top'} borderColor={'#c7c7c7'}/>
-
-          <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
-              <Text style={styles.textbutton}>ENVIAR</Text>
-
-              </TouchableOpacity>
-
-              */
