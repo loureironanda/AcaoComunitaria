@@ -34,7 +34,7 @@ export default class Projects extends Component {
             <CardContent text="O Projeto acontece todos os sábados no Centro Social Vicenta Maria, 
             atendendo 30 crianças entre 6 e 14 anos. O voluntário conduzirá oficinas de recreação e valores."/>
 
-            <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
+            <CardButton style={styles.btnProjeto} onPress={() => this.props.navigation.navigate('QuadroAvisos')} title="VER QUADRO DE AVISOS" color="#FFFFFF" />
           </Card>
 
           {/* PROJETO ELLU */ }
@@ -49,7 +49,7 @@ export default class Projects extends Component {
             Cada etapa tem dois dias de imersão em acampamento com universitários e parceiros da Ação
             Comunitária. "/>
 
-            <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
+            <CardButton style={styles.btnProjeto} onPress={() => this.props.navigation.navigate('QuadroAvisos')} title="VER QUADRO DE AVISOS" color="#FFFFFF" />
           </Card>
 
           {/* PROJETO PÉ PEQUENO */ }
@@ -63,7 +63,7 @@ export default class Projects extends Component {
             vez por semestre, com oficinas para diferentes públicos, confecção de currículo, horta comunitária,
              atendimentos de saúde, loja gratuita (Street Store), entre outras atividades."/>
 
-            <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
+            <CardButton style={styles.btnProjeto} onPress={() => this.props.navigation.navigate('QuadroAvisos')} title="VER QUADRO DE AVISOS" color="#FFFFFF" />
           </Card>
 
           {/* PROJETO VOLUNTARIADO */ }
@@ -76,7 +76,7 @@ export default class Projects extends Component {
             <CardContent text="Voluntariado no Setor de Ação Comunitária, desenvolvendo, coordenando ou 
             acompanhando os projetos do setor, como as campanhas de arrecadação."/>
 
-            <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
+            <CardButton style={styles.btnProjeto}onPress={() => this.props.navigation.navigate('QuadroAvisos')} title="VER QUADRO DE AVISOS" color="#FFFFFF" />
           </Card>
 
           {/* PROJETO MUSICALIZAÇÃO */ }
@@ -89,7 +89,7 @@ export default class Projects extends Component {
             <CardContent text="Monitor voluntário em projeto de musicalização infantil para as turmas 
             da Educação Infantil da Escola La Salle Rio de Janeiro."/>
 
-            <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
+            <CardButton style={styles.btnProjeto} onPress={() => this.props.navigation.navigate('QuadroAvisos')} title="VER QUADRO DE AVISOS" color="#FFFFFF" />
           </Card>
 
           {/* PROJETO PASTORAL */ }
@@ -101,7 +101,7 @@ export default class Projects extends Component {
 
             <CardContent text="Eventos religiosos, missas, confissões, grupo de oração e terço."/>
 
-            <CardButton style={styles.btnProjeto} onPress={() => {}} title="ver mais" color="#FFFFFF" />
+            <CardButton style={styles.btnProjeto} onPress={() => this.props.navigation.navigate('QuadroAvisos')} title="VER QUADRO DE AVISOS" color="#FFFFFF" />
           </Card>
 
         </View>
@@ -129,8 +129,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#0d62ad",
     paddingTop: 20,
     paddingBottom: 20,
-    paddingLeft: 140,
-    paddingRight: 140,
+    paddingLeft: 90,
+    paddingRight: 90,
     marginLeft: 15,
     marginBottom: 40,
     borderRadius: 20

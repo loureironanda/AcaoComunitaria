@@ -6,14 +6,15 @@ const menuData = [
   { icon: "home", name: "Home", screenName: "Home", key: 1 },
   { icon: "users", name: "Sobre", screenName: "About", key: 2 },
   { icon: "calendar", name: "Calendário", screenName: "Calendar", key: 3 },
-  { icon: "star", name: "Projetos", screenName: "Projects", key: 4 },
+  { icon: "folder", name: "Projetos", screenName: "Projects", key: 4 },
   { icon: "image", name: "Galeria", screenName: "Gallery", key: 5 },
   { icon: "heart", name: "Ser voluntário", screenName: "Volunteer", key: 6 },
+  { icon: "star", name: "Quadro de Avisos", screenName: "QuadroAvisos", key: 7 },
   {
     icon: "phone",
     name: "Contato",
     screenName: "Contact",
-    key: 7
+    key: 8
   }
 ];
 

@@ -8,6 +8,7 @@ import Login from "./screens/Login";
 import Cadastro from "./screens/Cadastro";
 import Contact from "./screens/Contact";
 import Volunteer from "./screens/Volunteer";
+import QuadroAvisos from "./screens/QuadroAvisos";
 import DrawerMenu from "./screens/DrawerMenu";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
@@ -24,6 +25,7 @@ const DrawerNavigation = createDrawerNavigator(
     "Login": { screen: Login}, 
     "Cadastro": { screen: Cadastro},
     "Volunteer": { screen: Volunteer},
+    "QuadroAvisos": { screen: QuadroAvisos},
     "Contact": { screen: Contact}
   },
 
