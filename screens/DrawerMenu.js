@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, TouchableOpacity, View, FlatList } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
+
 const menuData = [
   { icon: "home", name: "Home", screenName: "Home", key: 1 },
   { icon: "users", name: "Sobre", screenName: "About", key: 2 },
@@ -10,12 +11,9 @@ const menuData = [
   { icon: "image", name: "Galeria", screenName: "Gallery", key: 5 },
   { icon: "heart", name: "Ser voluntário", screenName: "Volunteer", key: 6 },
   { icon: "star", name: "Quadro de Avisos", screenName: "QuadroAvisos", key: 7 },
-  {
-    icon: "phone",
-    name: "Contato",
-    screenName: "Contact",
-    key: 8
-  }
+  { icon: "phone", name: "Contato", screenName: "Contact", key: 8 },
+  { icon: "arrow-right", name: "Sair", screenName: "Sair", key: 9 },
+
 ];
 
 class DrawerMenu extends Component {
@@ -51,6 +49,8 @@ const DrawerItem = ({ navigation, icon, name, screenName }) => (
   >
     <Icon name={icon} size={22} color="white" style={{ margin: 15}} />
     <Text style={styles.menuItemText}>{name}</Text>
+    
+
   </TouchableOpacity>
 );
 

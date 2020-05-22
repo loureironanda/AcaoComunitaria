@@ -10,10 +10,26 @@ import Contact from "./screens/Contact";
 import Volunteer from "./screens/Volunteer";
 import QuadroAvisos from "./screens/QuadroAvisos";
 import DrawerMenu from "./screens/DrawerMenu";
+import Sair from "./screens/Sair";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import * as firebase from 'firebase';
+
+
+var firebaseConfig = {
+  apiKey: "AIzaSyAix1ncxMrO7Rz24GYy1i7H6getKkpRdv8",
+  authDomain: "appacaocomunitaria.firebaseapp.com",
+  databaseURL: "https://appacaocomunitaria.firebaseio.com",
+  projectId: "appacaocomunitaria",
+  storageBucket: "appacaocomunitaria.appspot.com",
+  messagingSenderId: "1064292544219",
+  appId: "1:1064292544219:web:1f27d784a6c636e430e6fe"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 
 const DrawerNavigation = createDrawerNavigator(
   {
@@ -26,7 +42,8 @@ const DrawerNavigation = createDrawerNavigator(
     "Cadastro": { screen: Cadastro},
     "Volunteer": { screen: Volunteer},
     "QuadroAvisos": { screen: QuadroAvisos},
-    "Contact": { screen: Contact}
+    "Contact": { screen: Contact},
+    "Sair": { screen: Sair}
   },
 
   {
@@ -66,4 +83,3 @@ export default class App extends Component {
 
   }
 }
-

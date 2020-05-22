@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Container, Content } from 'native-base';
-
+import * as firebase from 'firebase';
 export default class Profile extends React.Component {
   
+  state = {
+    name: "",
+    email: "",
+    password: "",
+    errorMessage: null
+  }
+
+  handleSignUp = () => {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then(userCredentials => {
+          this.props.navigation.navigate('Home')
+
+            return userCredentials.user.updateProfile({
+                displayName: this.state.name
+            })
+        })
+        .catch(error => this.setState({ errorMessage: 'Encontramos um erro no cadastro' }));
+  };
+
   constructor(){
       super()
   }
@@ -18,13 +39,17 @@ export default class Profile extends React.Component {
               style={{marginTop: 70,width: 305, height: 160}} 
             />
 
-          <TextInput placeholder="Nome" style={styles.input}/>
+            <View style={styles.errorMessage}>
+               {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
+            </View>
 
-            <TextInput placeholder="E-mail" style={styles.input}/>
+            <TextInput placeholder="Nome" style={styles.input} onChangeText={name => this.setState({ name })} value={this.state.name}/>
 
-            <TextInput placeholder="Senha" style={styles.input}/>
+            <TextInput placeholder="E-mail" style={styles.input} onChangeText={email => this.setState({ email })} value={this.state.email}/>
+
+            <TextInput placeholder="Senha" style={styles.input} secureTextEntry onChangeText={password => this.setState({ password })} value={this.state.password}/>
             
-            <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
+            <TouchableOpacity style={styles.buttoninput} onPress={this.handleSignUp}>
                 <Text style={styles.textbutton}>CADASTRAR</Text>
             </TouchableOpacity>
 
@@ -97,4 +122,10 @@ textologin: {
   marginTop: 30
 },
 
+  error: {
+    color: "red",
+    marginTop: 20,
+    marginBottom: 10,
+    textAlign: "center"
+  }
 });

@@ -5,7 +5,23 @@ import { Ionicons } from '@expo/vector-icons';
 import { Text } from "react-native";
 import Carousel from 'react-native-snap-carousel';
 import { Card } from 'react-native-cards';
+import * as firebase from 'firebase';
 export default class Home extends Component {
+
+  state = {
+    email: "",
+    displayName: ""
+  }
+
+  componentDidMount() {
+      const {email, displayName} = firebase.auth().currentUser
+
+      this.setState({ email, displayName });
+  }
+
+  signOutUser = () => {
+      firebase.auth().signOut();
+  };
 
   constructor(props){
     super(props);
@@ -118,7 +134,7 @@ export default class Home extends Component {
             </TouchableOpacity>
           </Card>
         </View>
-    
+        
         </Content>
       </Container>
     

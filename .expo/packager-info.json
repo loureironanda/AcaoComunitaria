@@ -1,10 +1,10 @@
 {
-  "packagerPort": 19001,
-  "packagerPid": 6476,
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
   "expoServerNgrokUrl": "https://pq-hsg.loureironanda.acaocomunitaria.exp.direct",
   "packagerNgrokUrl": "https://packager.pq-hsg.loureironanda.acaocomunitaria.exp.direct",
-  "ngrokPid": 4904,
-  "webpackServerPort": null
+  "ngrokPid": 1232,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 4136,
+  "webpackServerPort": null,
+  "devToolsPort": 19002
 }

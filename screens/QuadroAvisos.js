@@ -31,30 +31,25 @@ export default class Quadro extends Component {
             <ScrollView style={styles.scrollView}>
               <View style={styles.picker}>
                 <Picker selectedValue = {this.state.data} onValueChange = {this.updateData}>
-                    <Picker.Item label = "Projeto 1" value = {0} />
-                    <Picker.Item label = "Projeto 2" value = {1} />
+                    <Picker.Item label = "Desabrochar" value = {0} />
+                    <Picker.Item label = "(ELLU)" value = {1} />
+                    <Picker.Item label = "Pé Pequeno" value = {2} />
+                    <Picker.Item label = "Voluntariado" value = {3} />
+                    <Picker.Item label = "Voluntariado de Musicalização" value = {4} />
+                    <Picker.Item label = "Pastoral" value = {5} />
                 </Picker>
               </View>
               
             {this.state.data === 0 && 
             <View>
                 <Card style={styles.cards}>
-                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
+                    <Text style={styles.textCard}>04/05 Visita das crianças do Desabrochar a La Salle</Text>
                 </Card>
 
                 <Card style={styles.cards}>
-                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
+                    <Text style={styles.textCard}>13/04 Início do Curso de Extensão em parceria com a Arquidiocese / Páscoa no Desabrochar</Text>
                 </Card>
 
-                <Card style={styles.cards}>
-                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
-                </Card>
-
-                <Card style={styles.cards}>
-                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
-                </Card>
-
-           
             </View>
             }
 
@@ -72,6 +67,38 @@ export default class Quadro extends Component {
                     <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
                 </Card>
 
+                <Card style={styles.cards}>
+                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
+                </Card>
+            </View>
+            }
+
+            {this.state.data === 2 && 
+            <View>
+                <Card style={styles.cards}>
+                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
+                </Card>
+            </View>
+            }
+
+            {this.state.data === 3 && 
+            <View>
+                <Card style={styles.cards}>
+                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
+                </Card>
+            </View>
+            }
+
+          {this.state.data === 4 && 
+            <View>
+                <Card style={styles.cards}>
+                    <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
+                </Card>
+            </View>
+            }
+
+          {this.state.data === 5 && 
+            <View>
                 <Card style={styles.cards}>
                     <Text style={styles.textCard}>Lorem ipsum dolor sit amet</Text>
                 </Card>

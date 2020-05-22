@@ -1,9 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Container, Content } from 'native-base';
-
+import * as firebase from 'firebase';
 export default class Profile extends React.Component {
   
+  state = {
+      email: "",
+      password: "",
+      errorMessage: null
+  }
+
+  handleLogin = () => {
+      const {email, password} = this.state
+
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then(userCredentials => {
+          this.props.navigation.navigate('Home')
+        })
+        .catch(error => this.setState({ errorMessage: 'Usuário ou senha incorreta' }));
+  };
+
   constructor(){
       super()
   }
@@ -20,11 +38,15 @@ export default class Profile extends React.Component {
               style={{marginTop: 100, width: 305, height: 160}} 
             />
 
-            <TextInput placeholder="E-mail" style={styles.input}/>
+            <View style={styles.errorMessage}>
+               {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
+            </View>
 
-            <TextInput placeholder="Senha" style={styles.input}/>
+            <TextInput placeholder="E-mail" style={styles.input} onChangeText={email => this.setState({ email })} value={this.state.email}/>
+
+            <TextInput placeholder="Senha" style={styles.input} secureTextEntry onChangeText={password => this.setState({ password })} value={this.state.password}/>
             
-            <TouchableOpacity style={styles.buttoninput} onPress={this.entrar}>
+            <TouchableOpacity style={styles.buttoninput} onPress={this.handleLogin}>
 
                 <Text style={styles.textbutton}>ENTRAR </Text>
 
@@ -33,6 +55,7 @@ export default class Profile extends React.Component {
               <Text style={styles.textocadastro}>Não possui conta? <Text style={styles.cadastrar}>Cadastre-se</Text> </Text>
              
               </TouchableOpacity>
+
          </View>
         </Content>
       </Container>
@@ -87,6 +110,13 @@ const styles = StyleSheet.create({
   
   cadastrar: {
       color: "#fcbe41"
+  },
+
+  error: {
+    color: "red",
+    marginTop: 20,
+    marginBottom: 10,
+    textAlign: "center"
   }
 
 });
