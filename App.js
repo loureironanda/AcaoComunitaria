@@ -17,7 +17,6 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import * as firebase from 'firebase';
 
-
 var firebaseConfig = {
   apiKey: "AIzaSyAix1ncxMrO7Rz24GYy1i7H6getKkpRdv8",
   authDomain: "appacaocomunitaria.firebaseapp.com",
@@ -28,7 +27,11 @@ var firebaseConfig = {
   appId: "1:1064292544219:web:1f27d784a6c636e430e6fe"
 };
 
-firebase.initializeApp(firebaseConfig);
+//firebase.initializeApp(firebaseConfig);
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const DrawerNavigation = createDrawerNavigator(
 
@@ -38,8 +41,16 @@ const DrawerNavigation = createDrawerNavigator(
     "Projects": { screen: Projects},
     "Calendar": { screen: Calendar},
     "Gallery": { screen: Gallery}, 
-    "Login": { screen: Login}, 
-    "Cadastro": { screen: Cadastro},
+    "Login": { screen: Login, 
+      navigationOptions: {
+        drawerLockMode: 'locked-closed'
+      }
+    }, 
+    "Cadastro": { screen: Cadastro,
+      navigationOptions: {
+        drawerLockMode: 'locked-closed'
+      }
+    },
     "Volunteer": { screen: Volunteer},
     "QuadroAvisos": { screen: QuadroAvisos},
     "Contact": { screen: Contact},
