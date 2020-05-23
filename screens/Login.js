@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Container, Content } from 'native-base';
 import * as firebase from 'firebase';
+
 export default class Profile extends React.Component {
   
   state = {

@@ -5,7 +5,6 @@ import * as firebase from 'firebase';
 export default class Profile extends React.Component {
   
   state = {
-    name: "",
     email: "",
     password: "",
     errorMessage: null
@@ -17,12 +16,8 @@ export default class Profile extends React.Component {
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(userCredentials => {
           this.props.navigation.navigate('Home')
-
-            return userCredentials.user.updateProfile({
-                displayName: this.state.name
-            })
         })
-        .catch(error => this.setState({ errorMessage: 'Encontramos um erro no cadastro' }));
+        .catch(error => this.setState({ errorMessage: 'Usuário já existente' }));
   };
 
   constructor(){
@@ -42,8 +37,6 @@ export default class Profile extends React.Component {
             <View style={styles.errorMessage}>
                {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
             </View>
-
-            <TextInput placeholder="Nome" style={styles.input} onChangeText={name => this.setState({ name })} value={this.state.name}/>
 
             <TextInput placeholder="E-mail" style={styles.input} onChangeText={email => this.setState({ email })} value={this.state.email}/>
 

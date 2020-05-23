@@ -1,10 +1,10 @@
 {
   "expoServerNgrokUrl": "https://pq-hsg.loureironanda.acaocomunitaria.exp.direct",
   "packagerNgrokUrl": "https://packager.pq-hsg.loureironanda.acaocomunitaria.exp.direct",
-  "ngrokPid": 1232,
+  "ngrokPid": 2916,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 4136,
+  "packagerPid": 4812,
   "webpackServerPort": null,
   "devToolsPort": 19002
 }

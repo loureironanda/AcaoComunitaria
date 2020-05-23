@@ -30,8 +30,8 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-
 const DrawerNavigation = createDrawerNavigator(
+
   {
     "Home": { screen: Home},
     "About": { screen: About},

@@ -9,8 +9,7 @@ import * as firebase from 'firebase';
 export default class Home extends Component {
 
   state = {
-    email: "",
-    displayName: ""
+    email: ""
   }
 
   componentDidMount() {
